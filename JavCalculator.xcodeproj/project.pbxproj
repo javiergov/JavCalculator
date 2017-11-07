@@ -54,14 +54,22 @@
 		DF8614551FB268670032A71B /* JavCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				DF8614561FB268670032A71B /* AppDelegate.swift */,
+				DF8614681FB2689D0032A71B /* Supporting Files */,
 				DF8614581FB268670032A71B /* ViewController.swift */,
 				DF86145A1FB268670032A71B /* Main.storyboard */,
+			);
+			path = JavCalculator;
+			sourceTree = "<group>";
+		};
+		DF8614681FB2689D0032A71B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF8614561FB268670032A71B /* AppDelegate.swift */,
 				DF86145D1FB268670032A71B /* Assets.xcassets */,
 				DF86145F1FB268670032A71B /* LaunchScreen.storyboard */,
 				DF8614621FB268670032A71B /* Info.plist */,
 			);
-			path = JavCalculator;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +284,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY74325BLM;
-				INFOPLIST_FILE = JavCalculator/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JavCalculator/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gov416.JavCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RY74325BLM;
-				INFOPLIST_FILE = JavCalculator/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JavCalculator/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gov416.JavCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
