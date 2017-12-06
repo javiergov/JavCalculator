@@ -8,6 +8,7 @@
 *.perspective
 *.perspectivev3
 *.xcuserstate
+*.xcbkptlist
 project.xcworkspace/
 xcuserdata/
 
