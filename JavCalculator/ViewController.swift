@@ -46,24 +46,19 @@ class ViewController: UIViewController {
         }
     }
     
+    private var brain = CalculatorBrain()
+    
     @IBAction func performOperation(_ sender: UIButton) {
-        userIsCurrentlyWriting = false;
-        if let operationSign = sender.currentTitle {
-            switch operationSign {
-            case "π":
-                displayValue = Double.pi //"3,1415926"
-            case "√":
-                displayValue = sqrt(displayValue)
-                //                let operand = Double(display.text!)!
-                //                display.text = String(sqrt(operand))
-            case "^2":
-                displayValue = displayValue * displayValue;
-                
-            default:
-                print("unknown operation \(operationSign)")
-            }
+        if userIsCurrentlyWriting {
+            brain.setOperand(displayValue);
+            userIsCurrentlyWriting = false;
+        }
+
+        if let mathematicalSymbol = sender.currentTitle {
+            brain.performOperation(mathematicalSymbol)
+        }
+        if let result = brain.result {
+            displayValue = result
         }
     }
-    
 }
-
