@@ -9,27 +9,6 @@
 import Foundation //UI independent, it's the model.
 //Classes have inheritances, structs do not
 
-func changeSign(operand : Double) -> Double {
-    return -operand
-}
-
-func elevateByTwo(operand : Double) -> Double {
-    return operand * operand
-}
-
-func divide(num1: Double, num2 : Double) -> Double {
-    return num1 / num2
-}
-
-func sumTwoNumbers(num1: Double, num2 : Double) -> Double {
-    return num1 + num2
-}
-
-func substract(num1: Double, num2 : Double) -> Double {
-    return num1 - num2
-}
-
-
 struct CalculatorBrain {
     
     private var accumulator: Double?
@@ -46,12 +25,12 @@ struct CalculatorBrain {
         "√" : Operation.unaryOperation(sqrt),    //sqrt,
       "cos" : Operation.unaryOperation(cos),
       "sin" : Operation.unaryOperation(sin),
-        "∓" : Operation.unaryOperation(changeSign),
-       "^2" : Operation.unaryOperation(elevateByTwo),
-       "×" : Operation.binaryOperation({(num1: Double, num2 : Double) -> Double in return num1 * num2 }),
-        "+" : Operation.binaryOperation(sumTwoNumbers),
-        "-" : Operation.binaryOperation(substract),
-        "÷" : Operation.binaryOperation(divide),
+        "∓" : Operation.unaryOperation({ -$0 }),
+       "^2" : Operation.unaryOperation({ $0 * $0 }),
+        "×" : Operation.binaryOperation({ $0 * $1 }),
+        "+" : Operation.binaryOperation({ $0 + $1 }),
+        "-" : Operation.binaryOperation({ $0 - $1 }),
+        "÷" : Operation.binaryOperation({ $0 / $1 }),
         "=" : Operation.equals
     ]
     
