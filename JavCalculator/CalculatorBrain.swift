@@ -17,10 +17,6 @@ func elevateByTwo(operand : Double) -> Double {
     return operand * operand
 }
 
-func multiply(num1: Double, num2 : Double) -> Double {
-    return num1 * num2
-}
-
 func divide(num1: Double, num2 : Double) -> Double {
     return num1 / num2
 }
@@ -52,7 +48,7 @@ struct CalculatorBrain {
       "sin" : Operation.unaryOperation(sin),
         "∓" : Operation.unaryOperation(changeSign),
        "^2" : Operation.unaryOperation(elevateByTwo),
-        "×" : Operation.binaryOperation(multiply),
+       "×" : Operation.binaryOperation({(num1: Double, num2 : Double) -> Double in return num1 * num2 }),
         "+" : Operation.binaryOperation(sumTwoNumbers),
         "-" : Operation.binaryOperation(substract),
         "÷" : Operation.binaryOperation(divide),
